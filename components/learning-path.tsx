@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, Server, Database, Zap, ArrowRight, CheckCircle } from "lucide-react"
+import { Code, Server, Database, Zap, CheckCircle } from "lucide-react"
 
 export default function LearningPath() {
   const steps = [

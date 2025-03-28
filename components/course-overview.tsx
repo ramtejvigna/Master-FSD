@@ -119,7 +119,7 @@ export default function CourseOverview() {
             <div>
               <h4 className="text-xl font-semibold mb-6 text-center">Frontend Development</h4>
               <div className="grid grid-cols-2 gap-6">
-                {frontendTech.map((tech, index) => (
+                {frontendTech.map((tech) => (
                   <motion.div
                     key={tech.name}
                     whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
@@ -136,7 +136,7 @@ export default function CourseOverview() {
             <div>
               <h4 className="text-xl font-semibold mb-6 text-center">Backend Development</h4>
               <div className="grid grid-cols-2 gap-6">
-                {backendTech.map((tech, index) => (
+                {backendTech.map((tech) => (
                   <motion.div
                     key={tech.name}
                     whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}

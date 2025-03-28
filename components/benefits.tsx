@@ -81,7 +81,7 @@ export default function Benefits() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit) => (
                 <div key={benefit.title} className="w-full flex-shrink-0 px-4">
                   <Card className="h-full bg-transparent text-black">
                     <CardContent className="p-8">

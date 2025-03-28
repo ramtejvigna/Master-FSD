@@ -11,7 +11,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -26,7 +25,6 @@ const formSchema = z.object({
 export default function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,10 +47,6 @@ export default function RegistrationForm() {
       console.log(values)
       setIsSubmitting(false)
       setIsSuccess(true)
-      toast({
-        title: "Registration Successful!",
-        description: "We've received your registration. We'll contact you soon with next steps.",
-      })
     }, 1500)
   }
 
@@ -140,7 +134,7 @@ export default function RegistrationForm() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Registration Successful!</h3>
                 <p className="text-gray-600 mb-8">
-                  Thank you for registering for our Full-Stack Web Development Course. We've received your information
+                  Thank you for registering for our Full-Stack Web Development Course. We&apos;ve received your information
                   and will contact you shortly with next steps.
                 </p>
                 <Button onClick={() => setIsSuccess(false)} className="bg-teal-500 hover:bg-teal-600">

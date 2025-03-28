@@ -23,7 +23,7 @@ export default function Instructors() {
                 </p>
               </div>
               <div className="md:w-1/2 bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold mb-4">Why We're Doing This</h4>
+                <h4 className="font-semibold mb-4">Why We&apos;re Doing This</h4>
                 <p className="text-gray-600">
                   We believe in <span className="font-semibold">Skill &gt; Degree</span>, and our goal is to make every
                   student job-ready! This collaboration brings together academic knowledge and practical industry

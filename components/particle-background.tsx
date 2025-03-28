@@ -33,8 +33,13 @@ export default function ParticleBackground() {
       color: string
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        if(canvas) {
+          this.x = Math.random() * canvas.width
+          this.y = Math.random() * canvas.height
+        } else {
+          this.x = Math.random() * 10;
+          this.y = Math.random() * 20;
+        }
         this.size = Math.random() * 3 + 1
         this.speedX = Math.random() * 0.5 - 0.25
         this.speedY = Math.random() * 0.5 - 0.25
@@ -45,12 +50,14 @@ export default function ParticleBackground() {
         this.x += this.speedX
         this.y += this.speedY
 
-        if (this.x < 0 || this.x > canvas.width) {
-          this.speedX = -this.speedX
-        }
-
-        if (this.y < 0 || this.y > canvas.height) {
-          this.speedY = -this.speedY
+        if(canvas) {
+          if (this.x < 0 || this.x > canvas.width) {
+            this.speedX = -this.speedX
+          }
+  
+          if (this.y < 0 || this.y > canvas.height) {
+            this.speedY = -this.speedY
+          }
         }
       }
 
